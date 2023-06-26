@@ -40,6 +40,9 @@ true일 경우 최초 생성 시 모든 아코디언 아이템을 열어둡니�
 #### multi : bollean || false
 true일 경우 여러개의 아코디언 아이템을 펼칠 수 있습니다.
 
+#### className : String || "active"
+펼쳐진 상태의 아코디언 아이템의 클래스명을 지정할 수 있습니다.
+
 <br/>
 <br/>
 
