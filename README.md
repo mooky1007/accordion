@@ -30,3 +30,27 @@
 ```js
 const accrdion = new Accordion(document.querySelector(".accordion_container"))
 ```
+<br/>
+<br/>
+
+## Parameters
+#### openAll : boolean || false
+true일 경우 최초 생성 시 모든 아코디언 아이템을 열어둡니다.
+
+#### multi : bollean || false
+true일 경우 여러개의 아코디언 아이템을 펼칠 수 있습니다.
+
+<br/>
+<br/>
+## Methods & Properties
+#### accordion.openNum(idx)
+idx번째 아코디언 아이템을 펼칩니다.
+
+#### accordion.closeNum(idx)
+idx번째 아코디언 아이템을 접습니다.
+
+#### accordion.openAll()
+모든 아코디언 아이템을 펼칩니다.
+
+#### accordion.closeAll()
+모든 아코디언 아이템을 접습니다.
