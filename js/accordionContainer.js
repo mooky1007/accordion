@@ -25,24 +25,19 @@ class AccordionItem {
         this.container = parent;
         this.el = el;
         this.calssName = className;
+        this.init();
+    }
+
+    get active() { return this._active; }
+    set active(value) { this._active = value; }
+
+    init() {
         this._active = false;
         this.title = this.el.querySelector('.accordion_title');
         this.content = this.el.querySelector('.accordion_content');
         this.style = this.el.style;
         this.originContentHeight = `${this.content.scrollHeight}px`;
         this.accOpen = new CustomEvent('accOpen');
-        this.init();
-    }
-
-    get active() {
-        return this._active;
-    }
-
-    set active(value) {
-        this._active = value;
-    }
-
-    init() {
         this.style.maxHeight = `${this.title.scrollHeight}px`;
         this.style.overflow = 'hidden';
         this.el.addEventListener('click', () => this.toggle());
