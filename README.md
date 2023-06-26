@@ -9,26 +9,24 @@
 ```
 
 ```html
-<div class="accordion_container">
-    <ul class="accordion_wrapper">
-        <li class="accordion_item">
-            <div class="accordion_title">Title 1</div>
-            <div class="accordion_content">Content 1</div>
-        </li>
-        <li class="accordion_item">
-            <div class="accordion_title">Title 2</div>
-            <div class="accordion_content">Content 2</div>
-        </li>
-        <li class="accordion_item">
-            <div class="accordion_title">Title 3</div>
-            <div class="accordion_content">Content 3</div>
-        </li>
-    </ul>
-</div>
+<ul class="accordion">
+    <li class="accordion_item">
+        <div class="accordion_title">Title 1</div>
+        <div class="accordion_content">Content 1</div>
+    </li>
+    <li class="accordion_item">
+        <div class="accordion_title">Title 2</div>
+        <div class="accordion_content">Content 2</div>
+    </li>
+    <li class="accordion_item">
+        <div class="accordion_title">Title 3</div>
+        <div class="accordion_content">Content 3</div>
+    </li>
+</ul>
 ```
 
 ```js
-const accrdion = new Accordion(".accordion_container")
+const accrdion = new Accordion(".accordion")
 ```
 <br/>
 <br/>
