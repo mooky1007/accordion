@@ -3,11 +3,13 @@ class Accordion {
         this.el = document.querySelector(el);
         this.open = config?.open || false;
         this.multi = config?.multi || false;
+        this.className = config?.className || 'active';
         this.init();
     }
 
     init() {
-        this.items = [...this.el.querySelectorAll('.accordion_item')].map(item => new AccordionItem(item, this.el));
+        this.items = [...this.el.querySelectorAll('.accordion_item')]
+            .map(item => new AccordionItem(item, this.el, this.className));
         if(this.open) this.openAll();
         if(!this.multi) this.el.addEventListener('accOpen', () => this.closeAll());
     }
@@ -19,9 +21,10 @@ class Accordion {
 }
 
 class AccordionItem {
-    constructor(el, parent) {
+    constructor(el, parent, className) {
         this.container = parent;
         this.el = el;
+        this.calssName = className;
         this._active = false;
         this.title = this.el.querySelector('.accordion_title');
         this.content = this.el.querySelector('.accordion_content');
@@ -43,17 +46,19 @@ class AccordionItem {
         this.style.maxHeight = `${this.title.scrollHeight}px`;
         this.style.overflow = 'hidden';
         this.el.addEventListener('click', () => this.toggle());
-        if(this.el.classList.contains('active')) this.open();
+        if(this.el.classList.contains(this.calssName)) this.open();
     }
 
     open() {
         this.container.dispatchEvent(this.accOpen);
         this.active = true;
+        this.el.classList.add(this.calssName);
         this.style.maxHeight = `${this.title.scrollHeight + this.content.scrollHeight}px`;
     }
 
     close() {
         this.active = false;
+        this.el.classList.remove(this.calssName);
         this.style.maxHeight = `${this.title.scrollHeight}px`;
     }
 

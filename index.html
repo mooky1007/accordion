@@ -28,12 +28,17 @@
                 <div class="accordion_content">Content 3</div>
             </li>
         </ul>
+        <div class="button_wrap">
+            <button onclick="accrdion.openAll()">Open All</button>
+            <button onclick="accrdion.closeAll()">Close All</button>
+        </div>
     </div>
 
     <script>
         const accrdion = new Accordion(".accordion_container", {
             openAll: false,
-            multi: true
+            multi: true,
+            className: "custom-className"
         })
     </script>
 </body>

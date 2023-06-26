@@ -40,3 +40,18 @@ html, body {
     background: #efefef;
     padding: 15px;
 }
+
+.button_wrap {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button_wrap button {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
