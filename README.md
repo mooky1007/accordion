@@ -42,6 +42,7 @@ true일 경우 여러개의 아코디언 아이템을 펼칠 수 있습니다.
 
 <br/>
 <br/>
+
 ## Methods & Properties
 #### accordion.openNum(idx)
 idx번째 아코디언 아이템을 펼칩니다.
