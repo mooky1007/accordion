@@ -24,7 +24,7 @@ class AccordionItem {
     constructor(el, parent, className) {
         this.container = parent;
         this.el = el;
-        this.calssName = className;
+        this.className = className;
         this.init();
     }
 
@@ -36,24 +36,23 @@ class AccordionItem {
         this.title = this.el.querySelector('.accordion_title');
         this.content = this.el.querySelector('.accordion_content');
         this.style = this.el.style;
-        this.originContentHeight = `${this.content.scrollHeight}px`;
         this.accOpen = new CustomEvent('accOpen');
         this.style.maxHeight = `${this.title.scrollHeight}px`;
         this.style.overflow = 'hidden';
         this.el.addEventListener('click', () => this.toggle());
-        if(this.el.classList.contains(this.calssName)) this.open();
+        if(this.el.classList.contains(this.className)) this.open();
     }
 
     open() {
         this.container.dispatchEvent(this.accOpen);
         this.active = true;
-        this.el.classList.add(this.calssName);
+        this.el.classList.add(this.className);
         this.style.maxHeight = `${this.title.scrollHeight + this.content.scrollHeight}px`;
     }
 
     close() {
         this.active = false;
-        this.el.classList.remove(this.calssName);
+        this.el.classList.remove(this.className);
         this.style.maxHeight = `${this.title.scrollHeight}px`;
     }
 
