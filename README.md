@@ -3,6 +3,11 @@
 [데모 페이지](https://mooky1007.github.io/accordion/)
 
 ## 사용법
+
+```html
+<script src="https://mooky1007.github.io/accordion/js/accordionContainer.js"></script>
+```
+
 ```html
     <div class="accordion_container">
         <ul class="accordion_wrapper">
