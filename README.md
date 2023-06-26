@@ -1,6 +1,7 @@
 # Accordion
 간단한 아코디언을 생성해주는 라이브러리입니다.
 
+## 사용법
 ```html
     <div class="accordion_container">
         <ul class="accordion_wrapper">
