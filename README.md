@@ -34,7 +34,7 @@ const accrdion = new Accordion(".accordion_container")
 <br/>
 
 ## Parameters
-#### openAll : boolean || false
+#### open : boolean || false
 true일 경우 최초 생성 시 모든 아코디언 아이템을 열어둡니다.
 
 #### multi : bollean || false
