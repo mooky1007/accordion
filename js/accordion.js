@@ -17,7 +17,7 @@ class Accordion {
     openNum(idx) { this.items[idx - 1].open(); }
     closeNum(idx) { this.items[idx - 1].close(); }
     openAll() { this.items.forEach(item => item.open()); }
-    closeAll() { this.items.forEach(item => item.active ? item.close() : null); }
+    closeAll() { this.items.forEach(item => item.close()); }
 }
 
 class AccordionItem {
@@ -25,18 +25,16 @@ class AccordionItem {
         this.container = parent;
         this.el = el;
         this.className = className;
-        this.init();
-    }
-
-    get active() { return this._active; }
-    set active(value) { this._active = value; }
-
-    init() {
-        this._active = false;
+        this.active = false;
         this.title = this.el.querySelector('.accordion_title');
         this.content = this.el.querySelector('.accordion_content');
         this.style = this.el.style;
         this.accOpen = new CustomEvent('accOpen');
+        
+        this.init();
+    }
+
+    init() {
         this.style.maxHeight = `${this.title.scrollHeight}px`;
         this.style.overflow = 'hidden';
         this.el.addEventListener('click', () => this.toggle());
@@ -57,7 +55,6 @@ class AccordionItem {
     }
 
     toggle() {
-        if(!this.active) this.open();
-        else this.close();
+        this.active ? this.close() : this.open();
     }
 }
