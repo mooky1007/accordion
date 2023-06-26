@@ -28,7 +28,7 @@
 ```
 
 ```js
-const accrdion = new Accordion(document.querySelector(".accordion_container"))
+const accrdion = new Accordion(".accordion_container")
 ```
 <br/>
 <br/>
