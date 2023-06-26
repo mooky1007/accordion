@@ -35,7 +35,8 @@ const accrdion = new Accordion(".accordion_container")
 
 ## Parameters
 #### open : boolean || false
-true일 경우 최초 생성 시 모든 아코디언 아이템을 열어둡니다.
+true일 경우 최초 생성 시 모든 아코디언 아이템을 열어둡니다.  
+`*multi parameters가 false일 경우 마지막 아이템만 열립니다.`
 
 #### multi : bollean || false
 true일 경우 여러개의 아코디언 아이템을 펼칠 수 있습니다.
